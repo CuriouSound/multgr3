@@ -43,7 +43,7 @@
 
   </form>
   <?php
-  echo $_POST['select'];
+
   echo'<br>';
   if (isset($_POST['select'])){
    for ($i = 1; $i <= 10; $i++)
