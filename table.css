@@ -1,14 +1,33 @@
-
-
-#sousMenu{
-    display: none;
-    background: gray;
+body{
+  background-image: url('multgr3/mars.jpg');background-size: 100%;
+  font-family: 'Lora', serif;
+color:#9D4D4D;
+margin:50px;
+}
+input{
+  background-color: #888080;
+}
+form>input
+  {
+  background-color: #888080;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+   border:1px solid #F5C5C5;
+ border-radius:5px;
+ /*width:200px;*/
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ cursor:pointer;
 }
 
-.Menu:hover #sousMenu
-{
-    display: block;
-    position: absolute;
-    padding: 0;
-    list-style: none;
+select{
+  background-color: #888080;
+  font-weight: bold;
+   border:1px solid #F5C5C5;
+ border-radius:5px;
+ /*width:200px;*/
+ box-shadow:1px 1px 2px #C0C0C0 inset;
+ cursor:pointer;
+}
+span{
+  color:red;
 }

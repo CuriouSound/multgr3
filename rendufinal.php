@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <title>Projet multiplication rendu</title>
 
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link rel="stylesheet" href="table.css">
+
 </head>
 <body>
+
   <h1>Projet multiplication</h1>
   <h2>Apprendre les tables de multiplication et réviser !</h2>
   <h3>Exercice 1 : Afficher la table de 3</h3>
@@ -18,7 +22,7 @@
   }
 ?>
 
-  <br> <br> <br> 
+  <br> <br> <br>
 
   <!----------------------------------------------FIN EXERCICE 1------------------------------------------------------>
 
@@ -52,7 +56,7 @@
   }
 }
 ?>
-<br> <br> <br>  
+<br> <br> <br>
 <!----------------------------------------------FIN EXERCICE 2-------------------------------------------------->
 <h3>Exercice 3 : Utiliser des checkbox</h3>
 <form action="" method="post">
@@ -85,7 +89,7 @@
     }
   }
     ?>
-    <br> <br> <br>  
+    <br> <br> <br>
 <!----------------------------------------------FIN EXERCICE 3-------------------------------------------------->
 
 <h3>Exercice 4 :Faire un système d'évaluation</h3>
