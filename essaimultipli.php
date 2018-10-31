@@ -2,39 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projet multiplication</title>
+  <title>Multiplication checkbox</title>
 </head>
 <body>
-<form action="#" method="POST">
-<input type="text" name="n1">
-<input type="text" name="n2">
-<input type="text" name="n3">
-<input type="text" name="n4">
-<input type="submit" value="Calculer">
-</form>
-<input type="text" value=
+ <h1>table</h1>
 
-<?php
-
-
-
-
-
+    <form action="#" method="post">
+      <input type="checkbox" name="table[]" value="1" >Table 1
+      <input type="checkbox" name="table[]" value="2" >Table 2
+      <input type="checkbox" name="table[]" value="3" >Table 3
+      <input type="checkbox" name="table[]" value="4" >Table 4
+      <input type="checkbox" name="table[]" value="5" >Table 5
+      <input type="checkbox" name="table[]" value="6" >Table 6
+      <input type="checkbox" name="table[]" value="7" >Table 7
+      <input type="checkbox" name="table[]" value="8" >Table 8
+      <input type="checkbox" name="table[]" value="9" >Table 9
+      <input type="checkbox" name="table[]" value="10" >Table 10
 
 
+      <input type="submit" value="Calculer" >
+
+    </form>
+
+    <?php
+
+    print_r($_POST);
+    if(!empty($_POST['table']))
+  {
+      foreach($_POST['table'] as $check)
+    {
+        echo $check.'<br>';
+
+         for ($i = 1; $i <= 10; $i++)
+        {
+          echo $check.' x '.$i.' = '. $check*$i.'<br>';
+
+        }
+
+    }
+
+  }
 
 
+    ?>
 
-
-?>
-
-
-
-
-
-
-</html>
 </body>
-
-<!-- // "<?php echo $_POST['n1']*$_POST['n2']*$_POST['n3']; ?>">
-//la multiplication est effectuée quand on appui sur le bouton "calculer", et est directement affichée dans le champ text -->e
+</html>

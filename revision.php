@@ -13,15 +13,16 @@
 
 </style>
 <?php
-if($_POST['reviser']){
+
+if(isset($_POST['reviser'])){
 
 
   $nb =rand(1,10);
   $table= $_POST['select'];
 
-  print_r($_POST);
 
-  echo $nb.'x'.$table.'<br>';
+
+
 
   $resultat=($table*$nb) ;
 
@@ -40,7 +41,10 @@ if($_POST['reviser']){
 }
 ?>
 
-  <form method="post" action="#">
+
+
+
+  <form method="post" action="">
 
     <select id="monselect" name="select">
       <option value="1">table 1</option>
@@ -54,13 +58,17 @@ if($_POST['reviser']){
       <option value="9">table9</option>
       <option value="10">table 10</option>
     </select>
-      <input style="display : none" name="reponse" value="<?php echo $nb * $table ?>">
+
+
+      <input style="display : none" type="text" name="reponse" value="<?php echo $nb * $table ?>" >
+
+
 
       <input type="submit" name="reviser" value="Evaluer"><br>
 
-      <input type="text" name="calcul" value="<?php echo $nb.'x'.$table.' = ' ; ?>">
+      <input type="text"  name="calcul" value="<?php echo $nb.'x'.$table.' = ' ; ?>" readonly>
 
-      <input type="text" name="reponse">
+      <input type="text" name="reponse" placeholder="entrez votre réponse">
       <input type="submit" name="valider" value="Valider">
      <!--  <input type="submit" value="Calculer" >
  -->
