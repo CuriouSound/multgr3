@@ -9,7 +9,7 @@
 </head>
 <body>
   <h1>Projet multiplication</h1>
-  <form method="post" action="#">
+  <form method="post" action="">
 
     <select id="monselect" name="select">
       <option value="1">table 1</option>

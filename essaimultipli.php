@@ -26,7 +26,7 @@
 
     <?php
 
-    print_r($_POST);
+    
     if(!empty($_POST['table']))
   {
       foreach($_POST['table'] as $check)
