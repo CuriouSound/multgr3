@@ -1,5 +1,9 @@
 body{
   background-image: url('mars.jpg');
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+
   font-family: 'Lora', serif;
   background-repeat: no-repeat;
 color:#FF7B7B;
