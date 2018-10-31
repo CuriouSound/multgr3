@@ -13,8 +13,11 @@
 
 </style>
 <?php
+session_start();
 
-if(isset($_POST['reviser'])){
+
+if(isset($_POST['select'])){
+
 
 
   $nb =rand(1,10);
@@ -24,26 +27,45 @@ if(isset($_POST['reviser'])){
 
 
 
-  $resultat=($table*$nb) ;
+  $resultat=$table*$nb;
 
-  if(isset($_POST['valider'])){
+  $_SESSION['resultat'] = $resultat;
+  // echo $_SESSION['resultat'];
+  ?>
+      <form method="post" action="">
+      <input style="display : none" type="text" name="rep" value="<?php echo $resultat ?>" >
+
+      <input type="text"  name="calcul" value="<?php echo $nb.'x'.$table.' = ' ; ?>" readonly>
+
+      <input type="text" name="reponse" placeholder="entrez votre réponse">
+      <input type="submit" name="valider" value="Valider">
 
 
-    if($resultat==$_POST['reponse']){
-        echo "gagner";
-        echo $resultat;
+  </form>
+  <?php
+}
 
-    }
-    else{
-      echo "faux";
-    }
+if(isset($_POST['valider'])){
+
+
+  if($_SESSION['resultat']==$_POST['reponse']){
+
+
+      echo "gagné";
+
+
+
+  }
+  else{
+    echo "faux";
   }
 }
+
 ?>
 
 
 
-
+<?php if(!isset($_POST['select'])) : ?>
   <form method="post" action="">
 
     <select id="monselect" name="select">
@@ -58,50 +80,16 @@ if(isset($_POST['reviser'])){
       <option value="9">table9</option>
       <option value="10">table 10</option>
     </select>
-
-
-      <input style="display : none" type="text" name="reponse" value="<?php echo $nb * $table ?>" >
-
-
-
-      <input type="submit" name="reviser" value="Evaluer"><br>
-
-      <input type="text"  name="calcul" value="<?php echo $nb.'x'.$table.' = ' ; ?>" readonly>
-
-      <input type="text" name="reponse" placeholder="entrez votre réponse">
-      <input type="submit" name="valider" value="Valider">
-     <!--  <input type="submit" value="Calculer" >
- -->
+    <input type="submit" value="evaluer">
   </form>
 
 
-<!-- //   echo'<br>';!
-//   if (isset($_POST['select'])){
-//    for ($i = 1; $i <= 10; $i++)
-//    {
-//     echo $_POST['select'].' x '.$i.' = '. $_POST['select']*$i.'<br>';
-//   }
-// } -->
+
+
+<?php endif; ?>
 
 
 
-<br><br><br><br><br><br><br><br><br><br>
-
-<!-- <?php
-for ($i = 1; $i <= 10; $i++)
-{
-    Echo 'La Table de multiplication de '.$i.'<br>';
-    for ($j = 1; $j <= 10; $j++)
-    {
-        echo $i.' x '.$j.' = '.$i*$j.'<br>';
-    }
-}
-
-
-
-
-
-?> -->
 
 </body>
 </html>
