@@ -1,8 +1,10 @@
 body{
-  background-image: url('multgr3/mars.jpg');background-size: 100%;
+  background-image: url('mars.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
   font-family: 'Lora', serif;
 color:#9D4D4D;
-margin:50px;
+/*margin:50px;*/
 }
 input{
   background-color: #888080;
